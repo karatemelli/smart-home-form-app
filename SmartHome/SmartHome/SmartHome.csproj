@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8937CD47-69CB-459B-9E86-30EE10421174}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartHome</RootNamespace>
+    <AssemblyName>SmartHome</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="control.Designer.cs">
+      <DependentUpon>control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="display.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="display.Designer.cs">
+      <DependentUpon>display.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ebeveyn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ebeveyn.Designer.cs">
+      <DependentUpon>ebeveyn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="smarthomeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smarthomeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="smarthomeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smarthomeDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="smarthomeDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>smarthomeDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SQLProcess.cs" />
+    <Compile Include="tools.cs" />
+    <Compile Include="userprocess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userprocess.Designer.cs">
+      <DependentUpon>userprocess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yapim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yapim.Designer.cs">
+      <DependentUpon>yapim.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="control.resx">
+      <DependentUpon>control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="display.resx">
+      <DependentUpon>display.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ebeveyn.resx">
+      <DependentUpon>ebeveyn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userprocess.resx">
+      <DependentUpon>userprocess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yapim.resx">
+      <DependentUpon>yapim.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="smarthomeDataSet.xsc">
+      <DependentUpon>smarthomeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="smarthomeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smarthomeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smarthomeDataSet.xss">
+      <DependentUpon>smarthomeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="smarthomeDataSet1.xsc">
+      <DependentUpon>smarthomeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="smarthomeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smarthomeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smarthomeDataSet1.xss">
+      <DependentUpon>smarthomeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="smarthomeDataSet2.xsc">
+      <DependentUpon>smarthomeDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="smarthomeDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>smarthomeDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="smarthomeDataSet2.xss">
+      <DependentUpon>smarthomeDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_icon1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46210.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-back-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-Male-User-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deleteuser1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-Male-User-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_file_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question-question_mark_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProblemReporterIconX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question-Mark.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47459.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91139-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\industry4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\industry4 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\closed59.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garage3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opened33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garage3 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\house95 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heating1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heating1 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airconditioner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\airconditionerclosed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\firewall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person214.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\surveillance34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thermometer73.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alarm63.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eiMd9Le4T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eiMd9Le4T1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnexit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add - Kopya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh_[freeiconsweb.net]_99261.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
